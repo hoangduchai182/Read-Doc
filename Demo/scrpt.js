@@ -56,65 +56,29 @@ window.addEventListener('load', function () {
   });
 
   btn_yellow.addEventListener('click', function () {
-    const selection = window.getSelection();
-    if (!selection.isCollapsed) {
-      const range = selection.getRangeAt(0);
-      const selectedText = range.cloneContents();
-      const span = document.createElement('span');
-      span.classList.add('highlight-yellow');
-      span.appendChild(selectedText);
-      range.deleteContents();
-      range.insertNode(span);
-    } // Xóa thẻ cũ đi, thêm thẻ mới có thẻ span vào
+    ChangeColor('highlight-yellow');
   });
   btn_blue.addEventListener('click', function () {
-    const selection = window.getSelection();
-    if (!selection.isCollapsed) {
-      const range = selection.getRangeAt(0);
-      const selectedText = range.cloneContents();
-      const span = document.createElement('span');
-      span.classList.add('highlight-blue');
-      span.appendChild(selectedText);
-      range.deleteContents();
-      range.insertNode(span);
-    } // Xóa thẻ cũ đi, thêm thẻ mới có thẻ span vào
+    ChangeColor('highlight-blue');
   });
 
   btn_red.addEventListener('click', function () {
-    const selection = window.getSelection();
-    if (!selection.isCollapsed) {
-      const range = selection.getRangeAt(0);
-      const selectedText = range.cloneContents();
-      const span = document.createElement('span');
-      span.classList.add('highlight-red');
-      span.appendChild(selectedText);
-      range.deleteContents();
-      range.insertNode(span);
-    } // Xóa thẻ cũ đi, thêm thẻ mới có thẻ span vào
+    ChangeColor('highlight-red');
   });
 
   btn_green.addEventListener('click', function () {
     // Xóa thẻ cũ đi, thêm thẻ mới có thẻ span vào
-    const selection = window.getSelection();
-    if (!selection.isCollapsed) {
-      const range = selection.getRangeAt(0);
-      const selectedText = range.cloneContents();
-      const span = document.createElement('span');
-      span.classList.add('highlight-green');
-      span.appendChild(selectedText);
-      range.deleteContents();
-      range.insertNode(span);
-    }
+    ChangeColor('highlight-green');
   });
 
-  function ChangeColor() {
+  function ChangeColor(color) {
     // Xóa thẻ cũ đi, thêm thẻ mới có thẻ span vào
     const selection = window.getSelection();
     if (!selection.isCollapsed) {
       const range = selection.getRangeAt(0);
       const selectedText = range.cloneContents();
       const span = document.createElement('span');
-      span.classList.add('highlight-green');
+      span.classList.add(color);
       span.appendChild(selectedText);
       range.deleteContents();
       range.insertNode(span);
