@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#myTable {
+  display: none;
+  border: 1px solid black;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.637);
+  font-weight: 700;
+  padding: 5px;
+}
+.btn-change {
+  padding: 10px;
+}
+#btn-yellow {
+  background-color: yellow;
+}
+#btn-blue {
+  background-color: blue;
+}
+#btn-red {
+  background-color: red;
+}
+#btn-green {
+  background-color: green;
+}
+#btn-list {
+  border: none;
+  background-color: none;
+}
+.highlight-yellow {
+  background-color: yellow;
+}
+.highlight-blue {
+  background-color: rgba(0, 0, 255, 0.6);
+}
+.highlight-red {
+  background-color: rgba(255, 0, 0, 0.7);
+}
+.highlight-green {
+  background-color: rgba(0, 128, 0, 0.7);
+}
+#area-hightline {
+  display: none;
+}
